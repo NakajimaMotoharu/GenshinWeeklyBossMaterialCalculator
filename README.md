@@ -30,7 +30,7 @@ Skill.csvのほうは次のような列の群で構成してください。
 サンプルとして、GenshinWeeklyMaterial.csvとGenshinSkill.csvを同封しました。  
 GenshinWeeklyMaterial.csvのほうは、Material.csvに当たるものでリオセスリまでのボスとキャラクターが記述されています。  
 GenshinSkill.csvのほうは、Skill.csvに当たるもので私のテイワットの育成状況を反映しておきました。適宜書き換えてください。  
-またこのサンプルはに登場するキャラの名前やボスの名前は原神Wiki(https://wikiwiki.jp/genshinwiki/)から引用しました。
+またこのサンプルはに登場するキャラの名前やボスの名前は原神Wiki( https://wikiwiki.jp/genshinwiki/ )から引用しました。
 
 # Update Log
 20231107 upload
