@@ -34,13 +34,13 @@ public class ReadCSV {
 		}
 	}
 
-	public DataBase getData(){
+	public DataBase getData(int level){
 		if (lines == null){
 			return null;
 		}
 		DataBase dataBase = new DataBase(lines.size());
 		for (int i = 0; i < lines.size(); i = i + 1){
-			dataBase.setNames(lines.get(i).split(","), i);
+			dataBase.setNames(lines.get(i).split(","), i, level);
 		}
 
 		return dataBase;

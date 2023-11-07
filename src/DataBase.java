@@ -9,14 +9,14 @@ public class DataBase {
 		materialNum = new int[bossNum][];
 	}
 
-	public void setNames(String[] data, int index){
+	public void setNames(String[] data, int index, int level){
 		bossName[index] = data[1];
 		int charSize = data.length - 2;
 		charName[index] = new String[charSize];
 		materialNum[index] = new int[charSize];
 		for (int i = 0; i < charName[index].length; i = i + 1){
 			charName[index][i] = data[i + 2];
-			materialNum[index][i] = 18;
+			materialNum[index][i] = GenshinCalc.getDefaultMaterialSize(level);
 		}
 	}
 
@@ -67,8 +67,19 @@ public class DataBase {
 		return ans;
 	}
 
-	public void subSkillLevel(int index, int charID, int s1, int s2, int s3){
+	public void subSkillLevel(int index, int charID, int s1, int s2, int s3, int level){
 		int m1 = 0, m2 = 0, m3 = 0;
+
+		if (s1 > level){
+			s1 = level;
+		}
+		if (s2 > level){
+			s2 = level;
+		}
+		if (s3 > level){
+			s3 = level;
+		}
+
 		switch (s1) {
 			case 7 -> m1 = 1;
 			case 8 -> m1 = 2;
